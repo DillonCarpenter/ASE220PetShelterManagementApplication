@@ -1,2 +1,4 @@
 # ASE220PetShelterManagementApplication
-It's for a class.
+Contributions:
+
+Dillon Carpenter: Initial Setup and Bootstrap
