@@ -6,12 +6,21 @@
     <body>
         <div class="container-fluid">
             <div class="row">
-                <header class="col align-self-center">Title</header>
+                <header class="col align-self-center"></header>
             </div>
             <div class="row">
-                <article class="col-6">Info</article>
-                <aside class="col-6">Picture</aside>
+                <article class="col-6" id="info">Info</article>
+                <aside class="col-6 d-flex justify-content-end align-items-center" id="picture">
+                    <img src="${pet.image}" class="img-fluid w-100 h-100" alt="image of pet">
+                </aside>
+                
+            </div>
+            <div>
+                <a href="index.html" class="btn btn-primary position-fixed bottom-0 start-50 translate-middle-x mb-3" >
+                    Return to home screen
+                </a>                
             </div>
         </div>
+        <script src="detailPage.js"></script>
     </body>
 </html>
