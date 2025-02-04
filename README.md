@@ -6,3 +6,7 @@ Work done:
         Completed detailLayout.html
         Adjusted index.html to fit mainPage.js logic
         Added images folder and all images
+    David-Michael Davies:
+        Reformatted images
+        Debugged and proofread code
+        related to images

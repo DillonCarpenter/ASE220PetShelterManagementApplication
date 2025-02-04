@@ -8,7 +8,7 @@
         "color": "Gold",
         "spayed": true,
         "age": 3,
-        "image":"images/lucy.jfif",
+        "image":"images/lucy.png",
         "microchip_number": "9876543210",
         "status": "Available for adoption",
         "description": "Lucy is a friendly and energetic Golden Retriever who loves to play fetch and go on long walks. She is great with children and other pets. Lucy is looking for a home where she can get plenty of exercise and attention. She is fully house-trained and knows basic commands. Lucy was spayed at a young age and is up-to-date on all vaccinations."
@@ -22,7 +22,7 @@
         "color": "Grey",
         "spayed": true,
         "age": 5,
-        "image":"images/max.jfif",
+        "image":"images/max.png",
         "microchip_number": "1234567890",
         "status": "Adopted",
         "description": "Max is a calm and affectionate Persian cat. He enjoys lounging around the house and cuddling with his favorite people. Max is well-groomed and has a luxurious, long coat that requires regular brushing. He is spayed and has no health issues. Max's previous owners were unable to care for him, and he's now in a loving home."
@@ -36,7 +36,7 @@
         "color": "Brown",
         "spayed": true,
         "age": 4,
-        "image":"images/rocky.jfif",
+        "image":"images/rocky.png",
         "microchip_number": "1122334455",
         "status": "Available for adoption",
         "description": "Rocky is a strong and resilient Bulldog with a calm and patient personality. He enjoys lounging on the couch and loves short walks around the block. Rocky is excellent with children and has a laid-back attitude. He was spayed and has a history of being well-cared for. Rocky is looking for a quiet home where he can relax and enjoy his golden years."
@@ -50,7 +50,7 @@
         "color": "Brown",
         "spayed": false,
         "age": 2,
-        "image":"images/lily.jfif",
+        "image":"images/lily.png",
         "microchip_number": "9988776655",
         "status": "In Foster Care",
         "description": "Lily is a playful and talkative Siamese cat with stunning blue eyes. She loves attention and will often follow you around the house. Lily is still a young kitten and enjoys playing with toys and climbing. While she hasn't been spayed yet, she is in the process of being scheduled for her spaying procedure. Lily is in foster care and is looking for a forever home soon."
@@ -64,7 +64,7 @@
         "color": "Brown",
         "spayed": true,
         "age": 1,
-        "image":"images/bunny.jfif",
+        "image":"images/bunny.png",
         "microchip_number": "5544332211",
         "status": "Available for adoption",
         "description": "Bunny is a sweet and affectionate Holland Lop rabbit. She loves hopping around and enjoys being pet, especially around her ears. Bunny is fully litter-trained and enjoys spending time outside in a safe, fenced area. She is spayed and in excellent health. Bunny is looking for a loving family with plenty of room for her to roam and play."
@@ -78,7 +78,7 @@
         "color": "Grey",
         "spayed": false,
         "age": 6,
-        "image":"images/charlie.jfif",
+        "image":"images/charlie.png",
         "microchip_number": "6677889900",
         "status": "In Shelter",
         "description": "Charlie is an intelligent and social African Grey parrot. He loves to mimic sounds and is learning to speak. Charlie enjoys interacting with people and is always curious about his surroundings. He is not spayed but is healthy and active. Charlie is currently in a shelter and looking for a new owner who has experience with parrots and can provide him with the mental stimulation and care he needs."
