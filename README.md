@@ -10,3 +10,6 @@ Work done:
         Reformatted images
         Debugged and proofread code
         related to images
+Contributions:
+
+Dillon Carpenter: Initial Setup and Bootstrap
