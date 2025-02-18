@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Delete Item</h1>
+    <p id="status">Deleting...</p>
+
+    <script>
+        //JSONBlob storage
+        const blobId = '1341180748148957184';
+
+
+        window.addEventListener("load", function() {
+            // Get the ID from the query string (e.g., delete.html?id=1)
+            const urlParams = new URLSearchParams(window.location.search);
+            const idToDelete = urlParams.get('id');
+
+            if (idToDelete) {
+                deleteData(idToDelete);
+            } else {
+                document.getElementById("status").innerText = "No ID provided!";
+            }
+        });
+
+        function deleteData(id) {
+            $.ajax({
+                type: "GET",
+                url: `https://jsonblob.com/api/jsonBlob/${blobId}`,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+                    // Find the index of the object to delete
+                    console.log(data);
+                    const indexToDelete = data.findIndex(item => item.ID === parseInt(id));
+                    
+                    if (indexToDelete !== -1) {
+                        // Remove the item with the matching ID
+                        data.splice(indexToDelete, 1);
+
+                        // After deleting, send the updated data back to the server
+                        $.ajax({
+                            type: "PUT",
+                            url: `https://jsonblob.com/api/jsonBlob/${blobId}`,
+                            data: JSON.stringify(data),
+                            contentType: "application/json; charset=utf-8",
+                            success: function(response) {
+                                console.log(data)
+                                document.getElementById("status").innerText = "Item deleted successfully!";
+                            },
+                            error: function(errMsg) {
+                                console.log(errMsg);
+                                document.getElementById("status").innerText = "Error deleting item!";
+                            }
+                        });
+                    } else {
+                        document.getElementById("status").innerText = "Item not found!";
+                    }
+                },
+                error: function(errMsg) {
+                    console.log(errMsg);
+                    document.getElementById("status").innerText = "Error loading data!";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
