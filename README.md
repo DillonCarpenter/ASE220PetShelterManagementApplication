@@ -10,6 +10,8 @@ Work done:
         Reformatted images
         Debugged and proofread code
         related to images
-Contributions:
-
-Dillon Carpenter: Initial Setup and Bootstrap
+    Dillon Carpenter: 
+        Initial Setup 
+        Bootstrap Setup 
+        Delete Function 
+        JSON Blob Setup
