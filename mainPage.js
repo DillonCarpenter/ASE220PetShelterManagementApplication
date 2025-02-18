@@ -28,6 +28,7 @@ function loadCards(){
                     <h5 class="card-title" style="color: ${pet.color};">${pet.name} - ${pet.breed} ${pet.type}</h5>
                     <p class="card-text">Sex: ${pet.sex} | Age: ${pet.age} | Color: ${pet.color} | Spayed: ${pet.spayed}</p>
                     <a href="detailLayout.html?id=${pet.ID}" class="btn btn-primary">View detailed page</a>
+                    <a class="btn btn-primary" href="delete.html?id=${pet.ID}">Delete</a>
                 </div>
             </div>
         </div>
@@ -40,4 +41,6 @@ function loadCards(){
         cardHTML += '</div>\n';
     }
     container.innerHTML += cardHTML;
+    //This isn't getting added for some reason.
+    container.insertAdjacentHTML("afterend", '<a class="btn btn-primary" href="create.html>Create</a>');
 }
