@@ -1,0 +1,26 @@
+### HTML ENDPOINT: your index page
+GET http://127.0.0.1:3000
+
+##HTML API Documentation
+GET http://127.0.0.1:3000/detail
+
+### API ENDPOINTS
+### Create a Document
+POST http://127.0.0.1:3000/api
+Content-type: application/json
+{
+    "test":"true"
+}
+
+### Retrieve a Document
+GET http://127.0.0.1:3000/api
+
+### Modify a Document
+PUT http://127.0.0.1:3000/api
+Content-type: application/json
+{
+    "test":"false"
+}
+
+### Delete a Document
+DELETE http://127.0.0.1:3000/api

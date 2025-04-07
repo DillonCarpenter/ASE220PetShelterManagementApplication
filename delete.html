@@ -30,7 +30,7 @@
         function deleteData(id) {
             $.ajax({
                 type: "GET",
-                url: `https://jsonblob.com/api/jsonBlob/${blobId}`,
+                url: `http://127.0.0.1:3000/api`,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function(data) {
@@ -45,7 +45,7 @@
                         // After deleting, send the updated data back to the server
                         $.ajax({
                             type: "PUT",
-                            url: `https://jsonblob.com/api/jsonBlob/${blobId}`,
+                            url: `http://127.0.0.1:3000/api`,
                             data: JSON.stringify(data),
                             contentType: "application/json; charset=utf-8",
                             success: function(response) {
