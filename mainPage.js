@@ -28,6 +28,7 @@ function loadCards(){
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#petModal">
                                     Show Pet Details
                                 </button>
+                                <a class="btn btn-danger" href="delete.html">Delete Pet</a>
 
                                 <div class="modal fade" id="petModal" tabindex="-1" aria-labelledby="petModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">

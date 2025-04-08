@@ -37,6 +37,7 @@ app.get('/detail', (req, res)=>{
 
 /*API ENDPOINTS */
 app.post('/api', (req, res) => {
+    let content = {}
     fs.readFile('./data.json', 'utf8', (err, data) => {
     fs.writeFileSync('./data.json', JSON.stringify(content));
     res.json(content);
@@ -50,14 +51,12 @@ app.get('/api', (req, res) => {
     res.json(content);
 });
 app.put('/api', (req, res)=>{
-    let content={}
-    fs.writeFileSync('./data.json',JSON.stringify(content));
+    let content= req.body;
+    fs.writeFileSync('./data.json',JSON.stringify(content, null, 2)); //prettier output. From ChatGPT
     res.send(JSON.stringify(content))
-    res.send('API endpoint: put')
 })
 app.delete('/api', (req, res)=>{
     if(fs.existsSync('./data.json')) fs.unlinkSync('./data.json')
-    res.send('API endpoint: delete')
 })
 
 /* Creating a server that listens to a specified port */
