@@ -1,8 +1,22 @@
 const express = require('express')
 const fs = require('fs')
+const cors = require('cors');
 const bodyParser= require('body-parser')
 
 const app = express()
+
+//Needed so CORS errors do not get thrown
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+const corsOptions = {
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 
 //This tells the application to accept input in json format
 app.use(express.json());
@@ -22,18 +36,18 @@ app.get('/detail', (req, res)=>{
 })
 
 /*API ENDPOINTS */
-app.post('/api', (req, res)=>{
-    let content= req.body
-    fs.writeFileSync('./data.json',JSON.stringify(content));
-    res.send(JSON.stringify(content))
-    res.send('API endpoint: post')
-})
-app.get('/api', (req, res)=>{
-    let content=req.body
-    fs.existsSync('./data.json') ? JSON.parse(fs.readFileSync('./data.json')) : {}
-    res.send(JSON.stringify(content))
-    res.send('API endpoint: get')
-})
+app.post('/api', (req, res) => {
+    let content = req.body;
+    fs.writeFileSync('./data.json', JSON.stringify(content));
+    res.json(content);
+});
+app.get('/api', (req, res) => {
+    let content = {};
+    if (fs.existsSync('./data.json')) {
+        content = JSON.parse(fs.readFileSync('./data.json'));
+    }
+    res.json(content);
+});
 app.put('/api', (req, res)=>{
     let content={}
     fs.writeFileSync('./data.json',JSON.stringify(content));
@@ -47,5 +61,5 @@ app.delete('/api', (req, res)=>{
 
 /* Creating a server that listens to a specified port */
 app.listen(port, () => {
-    console.log(`A server was created to listen on porst ${port}`)
+    console.log(`A server was created to listen on port ${port}`)
 })
