@@ -37,9 +37,10 @@ app.get('/detail', (req, res)=>{
 
 /*API ENDPOINTS */
 app.post('/api', (req, res) => {
-    let content = req.body;
+    fs.readFile('./data.json', 'utf8', (err, data) => {
     fs.writeFileSync('./data.json', JSON.stringify(content));
     res.json(content);
+    })
 });
 app.get('/api', (req, res) => {
     let content = {};

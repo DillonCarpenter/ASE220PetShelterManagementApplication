@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" src="${pet.image}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <header class="col align-self-center"></header>
+
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">ID:</span>
+                    <input type="text" class="form-control" id="ID" placeholder="Ex. 1001" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Name:</span>
+                    <input type="text" class="form-control" id="Name" placeholder="Ex. Lucy" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Type:</span>
+                    <input type="text" class="form-control" id="Type" placeholder="Ex. Dog" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Breed:</span>
+                    <input type="text" class="form-control" id="Breed" placeholder="Ex. Golden Retriever" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Sex:</span>
+                    <input type="text" class="form-control" id="Sex" placeholder="Ex. Female" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Color:</span>
+                    <input type="text" class="form-control" id="Color" placeholder="Ex. Golden" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Spayed:</span>
+                    <input type="text" class="form-control" id="Spayed" placeholder="Ex. true" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Age:</span>
+                    <input type="text" class="form-control" id="Age" placeholder="Ex. 3" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Image Source:</span>
+                    <input type="text" class="form-control" id="Image" placeholder="Ex. images/lucy.png" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Microchip Number:</span>
+                    <input type="text" class="form-control" id="Microchip" placeholder="Ex. 9876543210" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Status:</span>
+                    <input type="text" class="form-control" id="Status" placeholder="Ex. Available for adoption" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Description:</span>
+                    <input type="text" class="form-control" id="Description" placeholder="Ex. Lucy is a friendly and energetic Golden Retriever who loves to play fetch and go on long walks. She is great with children and other pets. Lucy is looking for a home where she can get plenty of exercise and attention. She is fully house-trained and knows basic commands. Lucy was spayed at a young age and is up-to-date on all vaccinations." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+            </div>        
+        </div>
+            <div>
+                <button onclick="createPet()" class="btn btn-primary position-fixed bottom-0 mb-3" >
+                    Create Pet Entry
+                </button>  
+                <a href="index.html" class="btn btn-primary position-fixed bottom-0 start-50 translate-middle-x mb-3" >
+                    Return to home screen
+                </a>                
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function createPet(){
+                const ID = document.getElementById("ID").value;
+                const Name = document.getElementById("Name").value;
+                const Type = document.getElementById("Type").value;
+                const Breed = document.getElementById("Breed").value;
+                const Sex = document.getElementById("Sex").value;
+                const Color = document.getElementById("Color").value;
+                const Spayed = document.getElementById("Spayed").value;
+                const Age = document.getElementById("Age").value;
+                const Image = document.getElementById("Image").value;
+                const Microchip = document.getElementById("Microchip").value;
+                const Status = document.getElementById("Status").value;
+                const Description = document.getElementById("Description").value;
+
+                $.ajax({
+                type: "GET",
+                url: `http://127.0.0.1:3000/api`,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+                    console.log(data);
+                    let newPet = {
+                        ID: ID,
+                        name: Name,
+                        type: Type,
+                        breed: Breed,
+                        sex: Sex,
+                        color: Color,
+                        spayed: Spayed,
+                        age: Age,
+                        image: Image,
+                        microchip_number: Microchip,
+                        status: Status,
+                        description: Description
+                    }
+
+                    data.push(newPet);
+
+                        $.ajax({
+                            type: "POST",
+                            url: `http://127.0.0.1:3000/api`,
+                            data: JSON.stringify(data),
+                            contentType: "application/json; charset=utf-8",
+                            success: function(response) {
+                                console.log(response)
+                                document.getElementById("status").innerText = "Item created successfully!";
+                            },
+                            error: function(errMsg) {
+                                console.log(errMsg);
+                                document.getElementById("status").innerText = "Error creating item!";
+                            }
+                        });
+                },
+                error: function(errMsg) {
+                    console.log(errMsg);
+                    document.getElementById("status").innerText = "Error loading data!";
+                }
+            });
+        }
+                        
+                    
+        
+        </script>
+    </body>
+</html>

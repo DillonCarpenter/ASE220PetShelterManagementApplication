@@ -42,6 +42,10 @@ function loadCards(){
             container.innerHTML += `<div class="text-center my-3">
                                         <a class="btn btn-primary" href="create.html">Create</a>
                                     </div>`;
-        }        
+        },        
+        error: function(errMsg) {
+            console.log(errMsg);
+            document.getElementById("status").innerText = "Error loading data!";
+        }
     });
 }
