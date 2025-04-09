@@ -36,7 +36,7 @@
                 success: function(data) {
                     // Find the index of the object to delete
                     console.log(data);
-                    const indexToDelete = data.findIndex(item => item.ID === parseInt(id));
+                    const indexToDelete = data.findIndex(item => item.ID == id);
                     
                     if (indexToDelete !== -1) {
                         // Remove the item with the matching ID
