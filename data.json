@@ -14,20 +14,6 @@
     "description": "Lucy is a friendly and energetic Golden Retriever who loves to play fetch and go on long walks. She is great with children and other pets. Lucy is looking for a home where she can get plenty of exercise and attention. She is fully house-trained and knows basic commands. Lucy was spayed at a young age and is up-to-date on all vaccinations."
   },
   {
-    "ID": 2,
-    "name": "Max",
-    "type": "Cat",
-    "breed": "Persian",
-    "sex": "Male",
-    "color": "Grey",
-    "spayed": true,
-    "age": 5,
-    "image": "images/max.png",
-    "microchip_number": "1234567890",
-    "status": "Adopted",
-    "description": "Max is a calm and affectionate Persian cat. He enjoys lounging around the house and cuddling with his favorite people. Max is well-groomed and has a luxurious, long coat that requires regular brushing. He is spayed and has no health issues. Max's previous owners were unable to care for him, and he's now in a loving home."
-  },
-  {
     "ID": 3,
     "name": "Rocky",
     "type": "Dog",
