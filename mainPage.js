@@ -27,15 +27,15 @@ function loadCards() {
                                     <h5 class="card-title" style="color: ${pet.color};">${pet.name} - ${pet.breed} ${pet.type}</h5>
                                     <p class="card-text">Sex: ${pet.sex} | Age: ${pet.age} | Color: ${pet.color} | Spayed: ${pet.spayed}</p>
                                     
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${index}">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal${pet.ID}">
                                         Show Pet Details
                                     </button>
 
-                                    <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="ModalLabel${index}" aria-hidden="true">
+                                    <div class="modal fade" id="modal${pet.ID}" tabindex="-1" aria-labelledby="ModalLabel${pet.ID}" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="ModalLabel${index}">Pet Details</h5>
+                                                    <h5 class="modal-title" id="ModalLabel${pet.ID}">Pet Details</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
@@ -50,7 +50,7 @@ function loadCards() {
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                    <a href="delete.html?id=${index}" class="btn btn-danger">Delete Pet Entry</a>
+                                                    <a href="delete.html?id=${pet.ID}" class="btn btn-danger">Delete Pet Entry</a>
                                                 </div>
                                             </div>
                                         </div>
