@@ -6,6 +6,9 @@ Work done:
         Completed detailLayout.html
         Adjusted index.html to fit mainPage.js logic
         Added images folder and all images
+        implemented ajax to delete.html, mainPage.js
+        created modals
+        made create button for creating new pet entries
     David-Michael Davies:
         Reformatted images
         Debugged and proofread code
