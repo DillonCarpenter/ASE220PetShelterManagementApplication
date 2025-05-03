@@ -1,4 +1,8 @@
 # ASE220PetShelterManagementApplication
+Running the code:
+    To run the code, execute jsonblob.js using node, by tpying "node jsonblob.js" in a terminal. Next open the index.html page.
+
+
 Work done:
     Drew Hanson:
         Created data.json using ChatGPT(with modifications)
